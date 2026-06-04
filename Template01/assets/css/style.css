@@ -1,0 +1,238 @@
+@charset "UTF-8";
+:root {
+  --link-color: #349bf4;
+  --main-color: #4468dd;
+  --text-color: #333;
+  --bg-color: #bebebe;
+}
+
+/*--------------------------------
+レイアウト
+---------------------------------*/
+.header {
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  html{
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  ul{
+    padding: 0;
+  }
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.nav {
+    justify-content: flex-end; 
+    display: flex;
+    height: 90px;
+    padding: 0px;
+    align-items: center;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-item {
+    margin-left: 20px; 
+}
+.nav li a:hover{
+    color: var(--main-color);
+}
+.nav li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-right: 1em;
+}
+
+header h1 a{
+  background-color: #000;
+  padding: 0.2em 0.5em;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/*--------------------------------
+キービジュアル
+---------------------------------*/
+#kv{
+background-color: var(--bg-color);
+}
+.sv{
+  background-color: #eeeeee;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+
+h2{
+  text-align: left;
+  margin: auto;
+  padding: 1em  1em  1em  3em;
+}
+h3{
+  margin: 0.3em;
+}
+/*--------------------------------
+一覧表示
+---------------------------------*/
+.thumbnail{
+  padding: 5px;
+}
+.thumbnail_box ul{
+  list-style: none;
+  border: 1px solid #ccc;
+  margin: 0 5px 5px 0;
+}
+.thumbnail_box h2{
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 1em;
+}
+.thumbnail img{
+  width: 300px;
+}
+
+.thumbnail_box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail a{
+  display: block;
+  background: #000;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.thumbnail p{
+  margin: 0 0 1em 0.3em;
+}
+
+
+
+/*--------------------------------
+main
+---------------------------------*/
+.container{
+  display: flex;
+  margin: auto;
+    max-width: 1280px;
+}
+#main{
+  margin: 0 0 0 auto;
+}
+.kv_img {
+  width: 100%;  
+  height: 500px;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.contents_box{
+  padding: 2em 0;
+}
+.contents_box p{
+  padding: 0 1em 0 0;
+}
+.contents_box time{
+  border-bottom: 1px solid #ccc;
+  display: block;
+  padding-bottom: 0.3em;
+}
+.contents_box h2{
+  padding-left: 0;
+}
+/*--------------------------------
+sideber
+---------------------------------*/
+#sideber{
+  width: 30%;
+  padding: 0 1em 0;
+}
+
+#sideber li{
+  list-style: none;
+  margin: 0.3em 0;
+}
+
+#sideber  h3{
+  margin: 0;
+  padding: 1em 0 0.2em;
+  border-bottom: dashed 2px #ccc;
+}
+
+/*--------------------------------
+footer
+---------------------------------*/
+footer{
+  background-color: #eeeeee;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+footer p{
+  text-align: center;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .container{
+    display: block;
+  }
+
+  #sideber{
+    width: auto;
+    padding-bottom: 20px;
+  }
+  .thumbnail_box {
+    display: block;
+  }
+  .thumbnail img {
+    width: 100%;
+  }
+  .thumbnail_box ul {
+    margin: 0 5px 15px 0;
+  }
+  .nav{
+    height: 50px;
+    justify-content: center;
+  }
+  .header h1{
+    margin-bottom: 0;
+  }
+  .header h1 a{
+    text-align: center;
+  }
+
+  .contents_box {
+    padding: 2em;
+}
+}
