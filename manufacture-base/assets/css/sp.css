@@ -1,0 +1,197 @@
+@charset "UTF-8";
+:root {
+  --link-color: #4468dd;
+  --main-color: #aa0606;
+  --text-color: #333;
+  --bg-color: #bebebe;
+}
+
+@media screen and (max-width: 767px){
+  .container{
+    display: flex;
+    align-items: self-start;
+  }
+  .pc{
+    display: none;
+  }
+  .sp{
+    display: block;
+  }
+/*--------------------------------
+全体
+---------------------------------*/
+html {
+  margin-top: 0px !important;
+}
+  #kv img{
+    width: 100%;
+    height: auto;
+  }
+  .biz_wrap_top{
+    display: inline-block;
+  }
+  .contents{
+    padding: 0 1em;
+  }
+  button{
+    width: 100% !important;
+  }
+  main{
+    margin-top: 3em;
+  }
+  .contents, .news{
+    padding: 30px 10px;
+    margin-bottom: 3em;
+  }
+  h2{
+    padding: 1em 1em 0.5em;
+  }
+  section{
+    padding: 1em 1em 5em;
+  }
+  header{
+    padding: 0 20px 20px !important;
+    height: 60px;
+  }
+/*--------------------------------
+お知らせリスト
+---------------------------------*/
+  .news dl{
+    flex-direction: column;
+  }
+  .news dd{
+    margin: 0;
+    padding-top: 1em;
+  }
+  .news dt {
+    border-right: none;
+  }
+
+  .thumbnail img{
+    height: auto;
+  }
+  .thumbnail{
+    list-style: none;
+  }
+
+/*--------------------------------
+個別ページ
+---------------------------------*/
+  .c-data-list{
+    display: inline-block;
+    width: 100%;
+  }
+  .title {
+    width: 59%;
+    height: 300px;
+    font-size: 30px;
+}
+
+/*--------------------------------
+   ハンバーガーナビゲーション
+---------------------------------*/
+
+  /* 1. 三本線ボタンの配置とデザイン */
+  
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  top: 12px;
+}
+/* 三本線の真ん中の線 */
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 25px;
+  background-color: #333;
+  position: absolute;
+  transition: all 0.3s;
+}
+/* 上下の線 */
+.menu-btn span::before { top: -8px; }
+.menu-btn span::after { bottom: -8px; }
+
+/* 2. メニューを画面外（右側）に隠す */
+.wp_nav_menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* 最初は画面の右に隠す */
+  width: 80%;    /* メニューの幅 */
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 80px;
+  transition: all 0.3s;
+  z-index: 90;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+}
+.wp_nav_menu ul {
+  flex-direction: column;
+  width: 100%;
+}
+.wp_nav_menu li 
+{
+  padding: 1em;
+  border-bottom: 2px dashed #ccc;
+}
+
+/* 3. ボタンが押された（チェックされた）時の動き */
+/* メニューを画面内にスライドイン */
+.menu-checkbox:checked ~ .wp_nav_menu {
+  right: 0;
+  padding-top: 1em;
+}
+/* 三本線を「×」に変形 */
+.menu-checkbox:checked + .menu-btn span {
+  background-color: transparent; /* 真ん中の線を消す */
+}
+.menu-checkbox:checked + .menu-btn span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.menu-checkbox:checked + .menu-btn span::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+  #sideber{
+    width: auto;
+    padding-bottom: 20px;
+  }
+  .thumbnail_box {
+    display: block;
+  }
+  .thumbnail img {
+    width: 100%;
+  }
+  .thumbnail_box ul {
+    margin: 0 5px 15px 0;
+  }
+  .nuv_sp {
+    height: 100%;
+    justify-content: center;
+    align-items: self-start;
+  }
+  .menu-nav-container{
+    width: 100%;
+  }
+  .header h1{
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+  .header h1 a{
+    text-align: center;
+  }
+
+  .contents_box {
+    padding: 2em;
+  }
+}
